@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <style>
+            .header 
+            {
+                position: relative;
+                width: 100%;
+                height: 140px;
+            }
+            .rectangle_nazv 
+            {
+                position: absolute;
+                width: 183px;
+                height: 116px;
+                top: 28px;
+                left: 106px;
+                background-color: pink;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            .main_text
+            {
+                font-size: 32px;
+            }
+            .rectangle_poisk
+            {
+                position: absolute;
+                width: 267px;
+                height: 31px;
+                top: 50px;
+                left: 420px;
+                border: 1px solid #5F5959;
+                border-radius: 17px;
+            }
+            .poisk_text
+            {
+                position: absolute;
+                width: 48px;
+                height: 17px;
+                top: 8px;
+                left: 10px;
+                font-family: Inter;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center; 
+            }
+            .circle_1
+            {
+                position: relative;
+                width: 38px;
+                height: 30px;
+                top: 0px;       /* внутри rectangle_poisk */
+                left: 228px;
+                border-width: 1px;     
+                border: 1px solid #5F5959;
+                border-radius: 17px;
+            }
+            .circle_2
+            {
+                position: relative;
+                width: 10px;
+                height: 10px;
+                top: -24px;
+                left: 240px;
+                border: 1px solid #5F5959;
+                border-radius: 50%;
+            }
+            .line
+            {
+                position: relative;
+                width: 7px;
+                height: 0px;
+                top: -24px;
+                left: 248px;
+                transform: rotate(45deg);
+                border: 1px solid #5F5959;
+            }
+            .picture
+            {
+                position: absolute;
+                width: 43px;
+                height: 34px;
+                top: 28px;
+                left: 1018px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="rectangle_nazv">
+                <span class="main_text">                    
+                    Лого<br>Название сайта
+                </span>
+            </div>
+        <div class="rectangle_poisk">
+            <div class="circle_1"></div>
+            <span class="poisk_text">
+                Поиск
+            </span>
+            <div class="circle_2"></div>
+            <div class="line"></div>
+        </div>
+        <img class="picture" src="PAIN.png">
+        </div>
+    </body>
+</html>

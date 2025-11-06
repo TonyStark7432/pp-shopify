@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(90deg, #4a90e2, #9013fe);
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.rectangle_nazv {
+  width: 200px;
+  height: 116px;
+  background-color: #fa709a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(250, 112, 154, 0.4);
+  margin-right: 40px;
+  text-align: center;
+  color: white;
+}
+
+.main_text {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.rectangle_poisk {
+  position: relative;
+  flex-grow: 1;
+  max-width: 400px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.13);
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.circle_1, .circle_2 {
+  border: 2px solid #8a8a8a;
+  background: transparent;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.circle_1 {
+  width: 30px;
+  height: 30px;
+}
+
+.circle_2 {
+  width: 15px;
+  height: 15px;
+  margin-left: auto;
+}
+
+.line {
+  width: 10px;
+  height: 2px;
+  background-color: #8a8a8a;
+  transform: rotate(45deg);
+  margin-left: 8px;
+}
+
+.poisk_text {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  line-height: 1;
+  user-select: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.picture {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.picture:hover {
+  transform: scale(1.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 140px;
+  background: #fff; 
+}
+
+.rectangle_nazv {
+  width: 183px;
+  height: 116px;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main_text {
+    font-size: 32px;
+}
+
+.rectangle_poisk {
+  width: 267px;
+  height: 31px;
+  border: 1px solid #5F5959;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.circle_1 {
+  width: 38px;
+  height: 30px;
+  border: 1px solid #5F5959;
+  border-radius: 17px;
+}
+
+.circle_2 {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #5F5959;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.poisk_text {
+  width: 48px;
+  height: 17px;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+
+.line {
+  width: 7px;
+  height: 1px;
+  border: 1px solid #5F5959;
+  background: #5F5959;
+  transform: rotate(45deg);
+  margin-left: 6px;
+}
+
+.picture {
+  width: 43px;
+  height: 34px;
+}
+
+.main_block {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rectangle_main {
+    width: 320px;
+    height: 60px;
+    background: #ceb7b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 0 auto;
+}
+
+.info-block {
+  width: 55%;
+  margin-top: 150px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+.rectangle_main {
+  width: 320px;
+  height: 60px;
+  background: #ceb7b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order_section {
+  width: 320px;
+  height: 40px;
+  background: #ceb7b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140px;
+}
+
+.payment_info {
+  width: 55%;
+  margin-top: 150px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+.footer_content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 60px;
+  margin-top: 60px;
+}
+
+.footer_logo {
+  margin-top: 30px;
+}
+
+.footer_nav {
+  background: #ceb7b2;
+  margin-top: 30px;
+  height: 49px;
+  border-radius: 10px;
+  padding: 20px 28px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+

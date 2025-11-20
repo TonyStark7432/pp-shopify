@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  # Твой Backend контейнер
+  backend:
+    build: ./backend           # Собери образ из папки backend
+    container_name: pp-backend
+    ports:
+      - "3000:3000"            # Порт 3000 внешний -> 3000 внутри
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    volumes:
+      - ./backend:/app          # Горячая перезагрузка при изменении кода
+      - /app/node_modules      # Но не перезаписывай node_modules
+    networks:
+      - pp-network
+    depends_on:
+      - db                      # Жди, пока БД запустится
+
+  # База данных PostgreSQL
+  db:
+    image: postgres:15-alpine
+    container_name: pp-postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin123
+      - POSTGRES_DB=pp_shopify
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - pp-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis для кэша
+  redis:
+    image: redis:7-alpine
+    container_name: pp-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - pp-network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  pp-network:
+    driver: bridge
